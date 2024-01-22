@@ -8,3 +8,9 @@
  *
  * 4. Выведите в консоль измененный массив
  */
+
+
+const myArray=[1,"aa",true,undefined]
+console.log(myArray)
+myArray[1]="mm"
+console.log(myArray)
