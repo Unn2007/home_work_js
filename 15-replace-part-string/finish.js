@@ -6,3 +6,7 @@
  *
  * 3. Выведите значение второй переменной в консоль
  */
+
+const greeting="Good Morning"
+const newGreeting=(greeting.split(" "))[0]+" "+"Evening"
+console.log(newGreeting)

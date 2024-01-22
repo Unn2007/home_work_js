@@ -12,3 +12,9 @@
  *
  * 5. Выведите в консоль значение второй переменной
  */
+
+const randomString = "qawerasfdsdfgdhfgjhhghj"
+console.log(randomString instanceof String)
+console.log(typeof randomString)
+const upperRandomString=randomString.toUpperCase()
+console.log(upperRandomString)
