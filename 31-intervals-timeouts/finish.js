@@ -14,8 +14,17 @@
  */
 
 
-for (let index = 1; index <6; index+=1){
-    setTimeout(()=>{},2000)
-    console.log(`Сообщение номер ${index}`)
+// for (let index = 1; index <6; index+=1){
+//     setTimeout(()=>{console.log(`Сообщение номер ${index}`)},2000)
+    
    
-}
+// }
+let index=1
+const timerId = setInterval(()=>{
+    console.log(`Сообщение номер ${index}`)
+    index+=1
+    if (index>5)  {
+       clearInterval(timerId) 
+    }
+
+    }, 2000);

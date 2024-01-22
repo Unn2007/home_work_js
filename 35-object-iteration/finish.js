@@ -13,3 +13,7 @@ const myObject = {
   key4: null,
   key10: NaN,
 }
+
+for (let key of Object.keys(myObject)) {
+  if ((key==="key1")||(key==="key3")) {console.log(myObject[key])}
+}
