@@ -12,4 +12,7 @@ function fn() {
   }
 }
 
-fn()(true)
+// fn()(true)
+
+const newFn = fn();
+newFn(5)
