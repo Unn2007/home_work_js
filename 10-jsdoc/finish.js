@@ -13,6 +13,13 @@
  * 4. Вызовите функцию
  */
 
+// коммент
+/**
+ * "Возвращает разницу двух чисел"
+ * @param {number} umensh 
+ * @param {number} vichit 
+ * @returns {number} разница двух чисел
+ */
 function raznica(umensh, vichit) {
     return umensh-vichit
 }

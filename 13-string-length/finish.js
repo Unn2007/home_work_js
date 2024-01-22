@@ -4,3 +4,8 @@
  *
  * 2. Виведите в консоль длину этой строки
  */
+
+
+
+const randomString="123456789101112131415"
+console.log(randomString.length)
