@@ -19,7 +19,7 @@ const MAX = 9999
 
 const myNumbers = [2355, 7235, 8135, 1762, 2361, 8351]
 let resultNumbers
-generateRandomNumber=()=>Math.round(Math.random()*(MAX-MIN)+MIN)
+generateRandomNumber=(max,min)=>Math.round(Math.random()*(max-min)+min)
 
 checkNumber = function(number,array) {
 array.forEach(element => {
@@ -39,7 +39,7 @@ array.push(number)
 
 
 do {
-randomNumber=generateRandomNumber()
+randomNumber=generateRandomNumber(MAX,MIN)
 checkResult = checkNumber(randomNumber,myNumbers)
 if (checkResult) {
     randomNumber=generateRandomNumber()
