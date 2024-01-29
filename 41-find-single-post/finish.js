@@ -18,6 +18,25 @@ const posts = [
   { postId: 6134, commentsQuantity: 2 },
 ]
 
-console.log(findPostById(6134, posts)) // { postId: 6134, commentsQuantity: 2 }
+const findPostById = (id,posts)=>posts.find((post)=>post.postId===id)
 
-console.log(findPostById(4511, posts)) // undefined
+  // for (let index = 0; index < posts.length; index+=1) {
+  //   if (posts[index].postId===id) {
+  //     console.log(posts[index].postId)
+  //     return posts[index]
+     
+  //   }
+    
+  // }
+
+  //  return undefined
+
+
+
+// findPostById(6134, posts)
+
+console.log(findPostById(6134, posts))
+ // { postId: 6134, commentsQuantity: 2 }
+
+console.log(findPostById(4511, posts)) 
+// undefined
