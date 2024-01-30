@@ -7,13 +7,22 @@
  * равными сумме всех количеств в каждой категории
  */
 
+// const quantitiesByCategories = (products)=>{
+
+//   return products.reduce(((result,{category,quantity})=>{
+//    if (result[category]===undefined) {
+//     result[category]=quantity
+//     return result}
+//      result[category]+=quantity
+//      return result 
+//   }),{})
+// }
+
 const quantitiesByCategories = (products)=>{
 
-  products.reduce(((result,{category,quantity})=>{
-   if (result.category) {
-
-   }
-
+  return products.reduce(((result,{category,quantity})=>{
+   (result[category]===undefined) ?  result[category]=quantity :  result[category]+=quantity
+     return result 
   }),{})
 }
 
