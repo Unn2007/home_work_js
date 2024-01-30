@@ -20,13 +20,34 @@ const d = [15, 26, 10, 23, 85]
 
 const arraySortInfo = (inputArray) =>{
     if (!inputArray.every((item)=> Boolean(Number(item)))) {
-        console.log("Некоторые элементы не являются числами")
+        return ("Некоторые элементы не являются числами")
     }
-    for (let index = 0; index < inputArray.length; index+=1) {
-        if ()
-        const element = array[index];
-        
+    
+    const isArraySortedUp =  inputArray.every((item,index,array)=>{
+        if (index<(array.length-1)) {
+            return (Boolean((item-array[index+1])<=0))
+        } else {return true}
+     })
+
+    if (isArraySortedUp) {
+        return ("Массив отсортирован по возрастанию")
     }
+     
+const isArraySortedDown = inputArray.every((item,index,array)=>{
+    if (index<(array.length-1)) {
+        return (Boolean((item-array[index+1])>=0))
+    } else {return true}
+ })
+
+    if (isArraySortedDown) {
+        return ("Массив отсортирован по убыванию")
+    }
+
+    if ((!isArraySortedDown)&(!isArraySortedUp)) {
+        return "Массив не отсортирован"
+    }
+
+
 }
 
 console.log(arraySortInfo(a)) 
