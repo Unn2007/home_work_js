@@ -10,6 +10,21 @@
  */
 const isElementInArray =(searchElement,inputArray)=> {
   if (typeof searchElement !=="object") {return inputArray.includes(searchElement)}
+  let searchElementToString
+  if (Array.isArray(searchElement)) {
+   
+     let searchElementToString= searchElement.join(" ")
+       return (inputArray.map(item=>{
+      if (Array.isArray(item)) {
+        return item.join(" ")
+      }
+      return item 
+     })).includes(searchElementToString)
+
+    }
+    searchElementToString = JSON.stringify(searchElement)
+    return (inputArray.map(item=>JSON.stringify(item))).includes(searchElementToString)
+
 }
 const tags = [
   ['javascript', 'es6'],
@@ -34,3 +49,5 @@ console.log(isElementInArray({ title: 'Apple', quantity: 25 }, fruits)) // true
 console.log(isElementInArray({ title: 'Banana' }, fruits)) // false
 
 console.log(isElementInArray(25, primitiveTypesArray)) // true
+
+console.log(JSON.stringify(tags[0]))
