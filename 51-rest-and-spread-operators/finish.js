@@ -19,18 +19,15 @@ const scores3 = [1.3, 2.5, 1.9]
 const scores4 = ['abc', 1.3, true, 2.5, 1.9]
 
 const meanScore = (...args) => {
-  return ([...args].some(element=>Number.isNaN(element))) ?
+  return (args.some(element=>Number.isNaN(+element))) ?
   "Все аргументы в вызове функции должны быть числами!" :
-  [...args].reduce(((prev,element)=>(prev+=element)),0)
+  (Math.round(((args.reduce(((previousValue,element)=>previousValue+element),0))/(args.length))*100))/100
 }
 
 
-// console.log([...scores4].some(element=> {
-//   console.log(element)
-//   return Number.isNaN(element)
-// }))
 
-console.log(Number.isNaN("abc"))
+
+
 
 
 console.log(meanScore(...scores1))
@@ -39,9 +36,8 @@ console.log(meanScore(...scores1))
 console.log(meanScore(...scores1,...scores2))
 // 2.8
 
-console.log(
-  meanScore(...scores1,...scores2,...scores3)
-)
+console.log(  meanScore(...scores1,...scores2,...scores3))
+
 // 2.59
 
 console.log(meanScore(...scores4))
