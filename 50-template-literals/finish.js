@@ -16,6 +16,7 @@ const  templateLiteral= (num)=> (num<10) ?
 Квадратный корень этого числа - ${Math.sqrt(num)}.`
 
 
+
 // ТЕСТ 1
 const myNumber = 9
 console.log(templateLiteral(myNumber))
