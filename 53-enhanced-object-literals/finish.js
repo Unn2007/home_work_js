@@ -20,7 +20,7 @@ const photosGallery = (title, dimensions, date) => {
     },
     [dimensions]:true,
     publishInfo()  {
-      console.log(`Фото было опубликовано ${Math.floor((new Date().getTime() - date.getTime()) / 1000)} секунды назад`);},
+      console.log(`Фото "${title}" было опубликовано ${Math.floor((new Date().getTime() - date.getTime()) / 1000)} секунды назад`);},
     date
   
 }}
