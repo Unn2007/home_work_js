@@ -26,7 +26,7 @@ const person2 = {
     age: 25,
   },
 }
-
+const shortPerson = ({name:n,info:{country:c,age:a},postsQuantity:p=0}) => ({n,c,a,p})
 // Напишите функцию "shortPerson" здесь
 
 console.log(shortPerson(person1))
