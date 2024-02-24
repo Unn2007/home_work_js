@@ -8,7 +8,7 @@
  * 3. Убедитесь, что итерация выполняется только
  * по собственным свойствам объекта
  */
-
+const sumObjectValues = (obj) => Object.values(obj).reduce(((acc,element)=>(typeof element==="number")?acc+=element:acc+=0),0)
 const objectWithNumbers = {
   a: 10,
   b: 20,
